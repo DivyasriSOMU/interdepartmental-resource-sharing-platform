@@ -1,49 +1,75 @@
 # Interdepartmental Planning & Resource Sharing Platform
 
-## Project Description
+## Project Overview
 
-The Interdepartmental Planning & Resource Sharing Platform is a web-based application developed using the MERN stack to simplify resource sharing and management between departments in an educational institution.
+The Interdepartmental Planning & Resource Sharing Platform is a web application that helps educational departments manage and share resources. Students can submit resource booking requests, while administrators can manage departments, resources, and booking approvals.
 
-The platform allows students to log in, view available departments and resources, and submit resource booking requests. Administrators can manage departments and resources, review booking requests, and approve or reject pending requests.
+## Technologies Used
 
-The system also includes booking conflict detection to identify overlapping requests and suggests alternative resources when conflicts are detected. Role-based access control helps ensure that administrative operations are restricted to authorized users.
+- React and Vite
+- Node.js and Express.js
+- MongoDB
+- JSON Web Tokens (JWT)
+- bcrypt for password hashing
 
-## Key Features
+## Features
 
-- User authentication for students and administrators
+- Student and administrator login
 - Role-based access control
 - Department management
 - Resource management
 - Resource booking requests
 - Booking conflict detection
 - Alternative resource suggestions
-- Admin approval and rejection of booking requests
-- Secure password hashing
+- Administrator approval and rejection of requests
 
-## Technologies Used
+## Project Structure
 
-- **Frontend:** React.js, Vite
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB
-- **Authentication:** JSON Web Token (JWT)
-- **Password Security:** bcrypt
+- `client/` — React frontend
+- `server/` — Express backend and API
+- `README.md` — Project documentation
 
-## Project Objective
+## Requirements
 
-The main objective of this project is to provide a centralized platform for managing and sharing institutional resources, improving coordination between departments and reducing scheduling conflicts.
+- Node.js and npm
+- MongoDB Community Server
+- Visual Studio Code (recommended)
 
-## Running the Project
+## Running Locally
 
-1. Install Node.js, npm, and MongoDB.
-2. Configure the backend environment variables in `server/.env`.
-3. Start the backend using the command configured in `server/package.json`.
-4. Start the frontend by running `npm run dev` inside the `client` folder.
-5. Open the local URL provided by Vite in your browser.
+### Backend
 
-## Author
+Open a terminal and run:
 
-**Name:** [Divyasri S]
+```powershell
+cd server
+npm install
+npm run dev
+```
 
-**Department:** [CSE(AIML)]
+Use the start command configured in `server/package.json` if `npm run dev` is unavailable. Configure the required environment variables in `server/.env`.
 
-**College:** [Easwari Engineering College]
+### Frontend
+
+Open a second terminal from the project root and run:
+
+```powershell
+cd client
+npm install
+npm run dev
+```
+
+Open the local URL displayed by Vite, usually `http://localhost:5173`.
+
+## Security
+
+- Passwords are hashed before storage.
+- Protected API endpoints use JWT authentication and role-based authorization.
+- Environment files containing secrets should not be uploaded to GitHub.
+
+## Author Details
+
+- Name: [Your Name]
+- Department: [Your Department]
+- College: [Your College]
+- Academic Year: [Your Academic Year]
